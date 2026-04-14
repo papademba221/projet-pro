@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2 class="logo"><i class="fa-solid fa-bookmark"></i>  RED PRODUCT</h2>
+            <nav role="navigation">
+                <ul>
+                    <li class="active"><i class="fa-solid fa-chart-line"></i> Dashboard</li>
+                    <li><i class="fa-solid fa-desktop"></i> Liste des hôtels</li>
+                </ul>
+            </nav>
+            <div class="user">
+                <img src="img/PHOTO FOR FLYER.jpg" alt="">
+                <div>
+                    <p>Mouhamet Badiane</p>
+                    <span>● en ligne</span>
+                </div>
+            </div>
+        </aside>
+        <!-- MAIN -->
+        <main class="main">
+            <!-- HEADER -->
+            <header class="header">
+                <button class="menu-toggle">☰</button>
+                <h1>Dashboard</h1>
+                <input type="text" placeholder="Recherche">
+            </header>
+            
+            <section class="bienvenue">
+                <h2>Bienvenue sur RED Product</h2>
+                <p>Lorem ipsum dolor sit amet consectetur</p>
+            </section>
+            <!-- CARDS -->
+            <section class="cards">
+                <div class="card">
+                    <div class="icon purple">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <h3>125 Formulaires</h3>
+                    <p>Je ne sais pas quoi mettre</p>
+                </div>
+                <div class="card">
+                    <div class="icon green">
+                        <i class="fa-solid fa-p"></i>
+                    </div>
+                    <h3>40 Messages</h3>
+                    <p>Je ne sais pas quoi mettre</p>
+                </div>
+                <div class="card">
+                    <div class="icon yellow">
+                        <i class="fa-solid fa-user-group"></i>
+                    </div>
+                    <h3>600 Utilisateurs</h3>
+                    <p>Je ne sais pas quoi mettre</p>
+                </div>
+                <div class="card">
+                    <div class="icon red">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <h3>25 Emails</h3>
+                    <p>Je ne sais pas quoi mettre</p>
+                </div>
+                <div class="card">
+                    <div class="icon purple">
+                        <i class="fa-solid fa-p"></i>
+                    </div>
+                    <h3>40 Hôtels</h3>
+                    <p>Je ne sais pas quoi mettre</p>
+                </div>
+                <div class="card">
+                    <div class="icon blue">
+                        <i class="fa-solid fa-user-group"></i>
+                    </div>
+                    <h3>02 Entités</h3>
+                    <p>Je ne sais pas quoi mettre</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script>
+        const toggle = document.querySelector(".menu-toggle");
+        const sidebar = document.querySelector(".sidebar");
+        toggle.addEventListener("click", () => {
+            sidebar.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>

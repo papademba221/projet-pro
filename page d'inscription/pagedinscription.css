@@ -1,0 +1,162 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+}
+
+body {
+	min-height: 100vh;
+	background: #333;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	padding: 25px;
+}
+
+.container {
+	
+	text-align: center;
+	width: 100%;
+	max-width: 400px;
+    
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	margin-bottom: 30px;
+}
+
+.logo h2 {
+	font-weight: bold;
+	letter-spacing: 1px;
+	font-size: 22px;
+}
+
+.icon {
+	font-size: 20px;
+	margin: 0;
+}
+
+.login-box {
+	background: #f2f2f2;
+	color: #333;
+	padding: 45px;
+	width: 100%;
+	border-radius: 8px;
+}
+
+.title {
+	margin-bottom: 18px;
+	font-size: 14px;
+}
+
+form label {
+   font-size: 15px;
+   color: #b5adad;
+   text-align: left;
+   display: block;
+   margin-bottom: 5px;
+}
+
+form input {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 22px;
+	border: none;
+	border-bottom: 1px solid #605656;
+	outline: none;
+	font-size: 14px;
+}
+
+.remember {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	justify-content: flex-start;
+	font-size: 15px;
+	margin-bottom: 5px;
+}
+
+.remember input {
+	width: 14px;
+	height: 14px;
+	margin: 0;
+}
+
+.remember label {
+	padding-left: 0;
+	margin: 0;
+	cursor: pointer;
+}
+
+button {
+	width: 100%;
+	padding: 12px;
+	background: #0a0808;
+	color: rgb(242, 235, 235);
+	border: none;
+	cursor: pointer;
+	border-radius: 4px;
+	font-size: 14px;
+	transition: 0.3s;
+}
+
+button:hover {
+	background: #333;
+}
+
+.links {
+	margin-top: 15px;
+	font-size: 12px;
+}
+
+.links a {
+	color: #f4c542;
+	text-decoration: none;
+}
+
+.links p {
+	margin-top: 5px;
+}
+
+/* 🔥 RESPONSIVE */
+
+/* Téléphones */
+@media (max-width: 480px) {
+	.login-box {
+	padding: 20px;
+}
+
+.logo h2 {
+	font-size: 18px;
+}
+
+.title {
+	font-size: 13px;
+}
+}
+
+/* Tablettes */
+@media (min-width: 481px) and (max-width: 768px) {
+	.container {
+	max-width: 350px;
+}
+}
+
+/* Grands écrans */
+@media (min-width: 1024px) {
+.container {
+max-width: 420px;
+}
+
+.login-box {
+padding: 30px;
+}
+}
