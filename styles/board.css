@@ -32,11 +32,21 @@ font-size: 18px;
 margin-bottom: 30px;
 }
 
+.header.gauche {
+    top: -20px;
+}
+.p {
+    margin-left:   18px;
+    
+    
+}
 .sidebar ul {
 list-style: none;
+
 }
 
 .sidebar li {
+
 padding: 12px;
 border-radius: 6px;
 cursor: pointer;
@@ -81,6 +91,32 @@ flex: 1;
 padding: 8px 12px;
 border: 1px solid #ddd;
 border-radius: 20px;
+}
+.notifs {
+    display: flex;
+    gap: 6px;
+}
+
+.cloche span{
+font-size: 10px;
+color: white;
+background: #f7b731;
+position: relative;
+border-radius: 50%;
+font-weight: bold;
+}
+
+.badge {
+    position: absolute;
+    top: -9px;
+    right: 10px;
+    padding: 2px ;
+
+}
+.tof{
+    top: 4px;
+    width: 20px;
+    border-radius: 50%;
 }
 
 
@@ -177,6 +213,10 @@ width: 200px;
 display: block;
 }
 
+.recherche{
+width: 150px;
+
+}
 .sidebar {
 position: fixed;
 left: -100%;
