@@ -16,7 +16,6 @@
         width: 100%;
         height: 100%;
         background-color: rgba(0,0,0,0.5);
-        
       }
       .modal-content {
         background-color: white;
@@ -41,12 +40,6 @@
       }
       .close:hover {
         color: black;
-      }
-      .iframe-container {
-        width: 100%;
-        height: 80vh;
-        border: none;
-        border-radius: 5px;
       }
       .btn {
         background: white;
@@ -110,49 +103,42 @@
                     <h3>Hôtel Terrou-Bi</h3>
                     <p class="prix">25.000 XOF par nuit</p>
                 </div>
-
                 <div class="card">
                     <img src="/img/image (1).png" class="photos" alt="">
                     <P class="ad">Rte des Almadies, Dakar</P>
                     <h3>King Fahd Palace </h3>
                     <p class="prix">20.000 XOF par nuit</p>
                 </div>
-
                 <div class="card">
                     <img src="/img/image (2).png" class="photos" alt="">
                     <P class="ad">Rte de la Corniche O, Dakar 16868</P>
                     <h3>Radisson Blu Hotel</h3>
                     <p class="prix">22.000 XOF par nuit</p>
                 </div>
-
                 <div class="card">
                     <img src="/img/image (3).png" class="photos" alt="">
                     <P class="ad">Place de l'Independance, 10 Rue PL 29, Dakar</P>
                     <h3>Pullman Dakar Teranga</h3>
                     <p class="prix">30.000 XOF par nuit</p>
                 </div>
-
                 <div class="card">
                     <img src="/img/image (4).png" class="photos" alt="">
                     <P class="ad">Lac Rose, Dakar</P>
                     <h3>Hôtel Lac Rose</h3>
                     <p class="prix">25.000 XOF par nuit</p>
                 </div>
-
                 <div class="card">
                     <img src="/img/image (5).png" class="photos" alt="">
                     <P class="ad">Mbour, Sénéga</P>
                     <h3>Hôtel Saly</h3>
                     <p class="prix">20.000 XOF par nuit</p>
                 </div>
-
                 <div class="card">
                     <img src="/img/image (6).png" class="photos" alt="">
                     <P class="ad">BP64, Saly 23000</P>
                     <h3>Plm Beach Resort & Spa</h3>
                     <p class="prix">22.000 XOF par nuit</p>
                 </div>
-
                 <div class="card">
                     <img src="/img/image (7).png" class="photos" alt="">
                     <P class="ad">Place de l'Independance, 10 Rue PL 29, Dakar</P>
@@ -173,11 +159,13 @@
     </div>
     
     <script>
-        const toggle = document.querySelector(".menu-toggle");
-        const sidebar = document.querySelector(".sidebar");
-        toggle.addEventListener("click", () => {
-            sidebar.classList.toggle("active");
+        const toggle = document.querySelector('.menu-toggle');
+        const sidebar = document.querySelector('.sidebar');
+        toggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+            toggle.textContent = sidebar.classList.contains('active') ? '×' : '☰';
         });
+        toggle.textContent = sidebar.classList.contains('active') ? '×' : '☰'; // Init
 
         function openModal() {
           document.getElementById('hotelModal').style.display = 'block';
@@ -194,3 +182,4 @@
         }
     </script>
 </body>
+</html>
