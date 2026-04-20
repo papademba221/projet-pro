@@ -261,10 +261,10 @@ display: block;
 }
 
 h1{
-    font-size: 15px;
+    font-size: 12px;
 }
 .recherche{
-width: 150px;
+width: 90px;
 
 }
 .sidebar {
@@ -276,7 +276,7 @@ z-index: 1000;
 }
 
 p{
-    font-size: 12px;
+    font-size: 10px;
 }
 .sidebar.active {
 left: 0;
@@ -303,10 +303,10 @@ gap: 10px;
 
 }
 .card{
-    width: 210px; 
+    width: 140px; 
 }
 .photos{
-    width: 200px;
-    height: 140px;
+    width: 130px;
+    height: 130px;
 }
 }

@@ -245,15 +245,18 @@ width: 200px;
 display: block;
 }
 h1{
-    font-size: 15px;
+    font-size: 10px;
 }
 
+h2{
+    font-size: 12px;
+}
 .recherche{
-width: 150px;
+width: 100px;
 
 }
 .sidebar {
-position: absolute;
+position: fixed;
 left: -100%;
 top: 0;
 height: 100%;
