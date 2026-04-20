@@ -5,6 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="/styles/liste.css">
+    <style>
+      /* Modal Popup */
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1001;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+        
+      }
+      .modal-content {
+        background-color: white;
+        margin: 5% auto;
+        padding: 5px;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 700px;
+        position: relative;
+        max-height: 100vh;
+        overflow-y: auto;
+      }
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 25px;
+        font-weight: bold;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+      }
+      .close:hover {
+        color: black;
+      }
+      .iframe-container {
+        width: 100%;
+        height: 80vh;
+        border: none;
+        border-radius: 5px;
+      }
+      .btn {
+        background: white;
+        cursor: pointer;
+      }
+    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -52,7 +100,7 @@
             
             <section class="bienvenue">
                 <h2>Hôtels  8</h2>
-                <a href="/pages/hotel.html" class="btn">+ Créer un nouveau hôtel</a>   
+                <button class="btn" onclick="openModal()">+ Créer un nouveau hôtel</button>
             </section>
             <!-- CARDS -->
             <section class="cards">
@@ -111,9 +159,17 @@
                     <h3>Pullman Dakar Teranga</h3>
                     <p class="prix">25.000 XOF par nuit</p>
                 </div>
-                
             </section>
         </main>
+    </div>
+
+    <!-- Hotel Form Popup -->
+    <div id="hotelModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Créer un nouveau hôtel</h2>
+        <iframe src="/pages/hotel.html" class="iframe-container" frameborder="0"></iframe>
+      </div>
     </div>
     
     <script>
@@ -122,6 +178,19 @@
         toggle.addEventListener("click", () => {
             sidebar.classList.toggle("active");
         });
+
+        function openModal() {
+          document.getElementById('hotelModal').style.display = 'block';
+        }
+        function closeModal() {
+          document.getElementById('hotelModal').style.display = 'none';
+        }
+        // Close modal if click outside
+        window.onclick = function(event) {
+          const modal = document.getElementById('hotelModal');
+          if (event.target == modal) {
+            closeModal();
+          }
+        }
     </script>
 </body>
-</html>
