@@ -299,14 +299,14 @@ grid-template-columns: repeat(2, 1fr);
 align-items: center;
 
 justify-content: space-between;
-gap: 10px;
+gap: 5px;
 
 }
 .card{
-    width: 140px; 
+    width: 150px; 
 }
 .photos{
-    width: 130px;
+    width: 140px;
     height: 130px;
 }
 }
