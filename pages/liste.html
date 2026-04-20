@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/styles/liste.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2 class="logo"><i class="fa-solid fa-bookmark"></i>  RED PRODUCT</h2>
+            <nav role="navigation">
+                <div class="gauche">
+                    <p class="p">Principal</p>
+                    <ul>
+                        <li><i class="fa-solid fa-chart-line"></i> <a href="/pages/board.html">Dashboard</a> </li>
+                        <li><i class="fa-solid fa-desktop"></i> Liste des hôtels</li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="user">
+                <img src="../img/PHOTO FOR FLYER.jpg" alt="">
+                <div>
+                    <p>Mouhamet Badiane</p>
+                    <p><span class="sp">●</span>  en ligne</p>
+                </div>
+            </div>
+        </aside>
+        <!-- MAIN -->
+        <main class="main">
+            <!-- HEADER -->
+            <header class="header">
+                <button class="menu-toggle">☰</button>
+                <h1>Liste des hôtels</h1>
+                <div class="recherche">
+                    <input type="text" placeholder="Recherche">
+                </div>
+                <div class="notifs">
+                    <div class="cloche">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="badge">3</span>
+                    </div>
+                    <img src="../img/PHOTO FOR FLYER.jpg" class="tof" alt="">
+                    <span class="sp1">●</span>
+                    <div class="bracket">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                    </div>
+                </div>
+            </header>
+            
+            <section class="bienvenue">
+                <h2>Hôtels  8</h2>
+                <a href="/pages/hotel.html" class="btn">+ Créer un nouveau hôtel</a>   
+            </section>
+            <!-- CARDS -->
+            <section class="cards">
+                <div class="card">
+                    <img src="/img/image.png" class="photos" alt="">
+                    <P class="ad">Boulevard Martin Luther King Dakar, 11500</P>
+                    <h3>Hôtel Terrou-Bi</h3>
+                    <p class="prix">25.000 XOF par nuit</p>
+                </div>
+
+                <div class="card">
+                    <img src="/img/image (1).png" class="photos" alt="">
+                    <P class="ad">Rte des Almadies, Dakar</P>
+                    <h3>King Fahd Palace </h3>
+                    <p class="prix">20.000 XOF par nuit</p>
+                </div>
+
+                <div class="card">
+                    <img src="/img/image (2).png" class="photos" alt="">
+                    <P class="ad">Rte de la Corniche O, Dakar 16868</P>
+                    <h3>Radisson Blu Hotel</h3>
+                    <p class="prix">22.000 XOF par nuit</p>
+                </div>
+
+                <div class="card">
+                    <img src="/img/image (3).png" class="photos" alt="">
+                    <P class="ad">Place de l'Independance, 10 Rue PL 29, Dakar</P>
+                    <h3>Pullman Dakar Teranga</h3>
+                    <p class="prix">30.000 XOF par nuit</p>
+                </div>
+
+                <div class="card">
+                    <img src="/img/image (4).png" class="photos" alt="">
+                    <P class="ad">Lac Rose, Dakar</P>
+                    <h3>Hôtel Lac Rose</h3>
+                    <p class="prix">25.000 XOF par nuit</p>
+                </div>
+
+                <div class="card">
+                    <img src="/img/image (5).png" class="photos" alt="">
+                    <P class="ad">Mbour, Sénéga</P>
+                    <h3>Hôtel Saly</h3>
+                    <p class="prix">20.000 XOF par nuit</p>
+                </div>
+
+                <div class="card">
+                    <img src="/img/image (6).png" class="photos" alt="">
+                    <P class="ad">BP64, Saly 23000</P>
+                    <h3>Plm Beach Resort & Spa</h3>
+                    <p class="prix">22.000 XOF par nuit</p>
+                </div>
+
+                <div class="card">
+                    <img src="/img/image (7).png" class="photos" alt="">
+                    <P class="ad">Place de l'Independance, 10 Rue PL 29, Dakar</P>
+                    <h3>Pullman Dakar Teranga</h3>
+                    <p class="prix">25.000 XOF par nuit</p>
+                </div>
+                
+            </section>
+        </main>
+    </div>
+    
+    <script>
+        const toggle = document.querySelector(".menu-toggle");
+        const sidebar = document.querySelector(".sidebar");
+        toggle.addEventListener("click", () => {
+            sidebar.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>
