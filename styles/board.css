@@ -172,6 +172,10 @@ grid-template-columns: repeat(3, 1fr);
 gap: 15px;
 }
 
+.card:hover{
+    transition: 0.6s ease;
+    transform: scale(1.1);
+}
 .card {
 background: white;
 padding: 20px;
