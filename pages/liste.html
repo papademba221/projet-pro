@@ -48,74 +48,86 @@
                         <a href="/index.html"><i class="fa-solid fa-right-to-bracket"></i></a>
                     </div>
                 </div>
-            </header>
+            </header> 
+            
             
             <section class="bienvenue">
                 <h2>Hôtels  8</h2>
-                <button class="btn" id="btn-creer" onclick="ouvrirModal()">+ Créer un nouveau hôtel</button>
+                <button class="mobile-create-btn" onclick="togglePopup()">+ Créer un nouveau hôtel</button>
 
-<!-- Modale -->
-                <div id="modal-overlay" style="display:none;">
-                    <div id="modal-box">
-                        <button id="btn-fermer" onclick="fermerModal()">✕</button>
-                        <iframe src="/pages/hotel.html" id="modal-iframe"></iframe>
-                    </div>
-                </div>
+
+                
             </section>
             <!-- CARDS -->
-            <section class="cards">
-                <div class="card">
-                    <img src="/img/image.png" class="photos" alt="">
-                    <P class="ad">Boulevard Martin Luther King Dakar, 11500</P>
-                    <h3>Hôtel Terrou-Bi</h3>
-                    <p class="prix">25.000 XOF par nuit</p>
-                </div>
-                <div class="card">
-                    <img src="/img/image (1).png" class="photos" alt="">
-                    <P class="ad">Rte des Almadies, Dakar</P>
-                    <h3>King Fahd Palace </h3>
-                    <p class="prix">20.000 XOF par nuit</p>
-                </div>
-                <div class="card">
-                    <img src="/img/image (2).png" class="photos" alt="">
-                    <P class="ad">Rte de la Corniche O, Dakar 16868</P>
-                    <h3>Radisson Blu Hotel</h3>
-                    <p class="prix">22.000 XOF par nuit</p>
-                </div>
-                <div class="card">
-                    <img src="/img/image (3).png" class="photos" alt="">
-                    <P class="ad">Place de l'Independance, 10 Rue PL 29, Dakar</P>
-                    <h3>Pullman Dakar Teranga</h3>
-                    <p class="prix">30.000 XOF par nuit</p>
-                </div>
-                <div class="card">
-                    <img src="/img/image (4).png" class="photos" alt="">
-                    <P class="ad">Lac Rose, Dakar</P>
-                    <h3>Hôtel Lac Rose</h3>
-                    <p class="prix">25.000 XOF par nuit</p>
-                </div>
-                <div class="card">
-                    <img src="/img/image (5).png" class="photos" alt="">
-                    <P class="ad">Mbour, Sénéga</P>
-                    <h3>Hôtel Saly</h3>
-                    <p class="prix">20.000 XOF par nuit</p>
-                </div>
-                <div class="card">
-                    <img src="/img/image (6).png" class="photos" alt="">
-                    <P class="ad">BP64, Saly 23000</P>
-                    <h3>Plm Beach Resort & Spa</h3>
-                    <p class="prix">22.000 XOF par nuit</p>
-                </div>
-                <div class="card">
-                    <img src="/img/image (7).png" class="photos" alt="">
-                    <P class="ad">Place de l'Independance, 10 Rue PL 29, Dakar</P>
-                    <h3>Pullman Dakar Teranga</h3>
-                    <p class="prix">25.000 XOF par nuit</p>
-                </div>
-            </section>
+            <div class="cards">
+                
+            </div>
         </main>
     </div>
 
+
+
+
+
+
+
+    
+    <div id="modal-card">
+<h2> CRÉER UN NOUVEAU HÔTEL</h2>
+            <button class="close-btn" onclick="togglePopup()">×</button>
+
+            <form>
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label>Nom de l'hôtel</label>
+                        <input type="text" placeholder="CAP Marniane">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Adresse</label>
+                        <input type="text" placeholder="Les îles du saloum, Mar Lodj">
+                    </div>
+
+                    <div class="form-group">
+                        <label>E-mail</label>
+                        <input type="email" placeholder="information@gmail.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Numéro de téléphone</label>
+                        <input type="text" placeholder="+221 77 777 77 77">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Prix par nuit</label>
+                        <input type="text" placeholder="25.000 XOF">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="devise">Devise</label>
+                        <select name="devise" id="devise">
+                            <option>F XOF</option>
+                            <option>EUR</option>
+                            <option>USD</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="telecharger">
+                    <p>Ajouter une photo</p>
+                    <div class="telecharger-box">
+                        <span>📷</span>
+                        <p>Ajouter une photo</p>
+                        <input type="file" id="photo" hidden>
+                    </div>
+                </div>
+
+                <button type="submit">Enregistrer</button>
+
+            </form>
+    </div>
 
     
     <script>
@@ -124,19 +136,17 @@
         toggle.addEventListener('click', () => {
             sidebar.classList.toggle('active');
         });
-            function ouvrirModal() {
-            document.getElementById('modal-overlay').style.display = 'flex';
-            }
 
-            function fermerModal() {
-            document.getElementById('modal-overlay').style.display = 'none';
+function togglePopup() {
+            const popup = document.getElementById("modal-card");
+            if (popup) {
+                popup.classList.toggle("open");
             }
-
-            // Fermer en cliquant en dehors
-            document.getElementById('modal-overlay').addEventListener('click', function(e) {
-            if (e.target === this) fermerModal();
-            });
+        }
+           
                     
     </script>
+
+    <script src="/liste.js" type="module"></script>
 </body>
 </html>
