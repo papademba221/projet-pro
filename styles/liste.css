@@ -436,6 +436,8 @@ width: 200px;
 
 .menu-toggle {
 display: block;
+color: black;
+background: none;
 }
 
 h1{
@@ -473,8 +475,8 @@ width: 100%;
 }
 
 .bienvenue .mobile-create-btn {
-    padding: 10px 16px;
-    font-size: 14px;
+    padding: 10px;
+    font-size: 12px;
 }
 
 .cards {
@@ -486,7 +488,7 @@ gap: 5px;
 
 }
 .card{
-    width: 170px; 
+    width: auto; 
     
 }
 .photos{
@@ -501,7 +503,11 @@ gap: 5px;
 grid-template-columns: 1fr;
 }
 
+.card{
+    width: auto;
+}
+
 button {
-width: 100%;
+width: ;
 }
 }
