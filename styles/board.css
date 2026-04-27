@@ -152,10 +152,15 @@ font-weight: bold;
     color: forestgreen;
 }
 
+.bracket i{
+    color: black;
+}
+
 .menu-toggle {
 display: none;
 font-size: 22px;
 background: none;
+color: black;
 border: none;
 cursor: pointer;
 }

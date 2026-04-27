@@ -518,7 +518,7 @@ body {
     font-size: 20px;
     margin: 0;
     padding: 0;
-    color: rgb(73, 73, 245);
+    color: black;
     background: none;
     border: none;
 }
@@ -547,7 +547,7 @@ body {
 
 .badge {
     position: absolute;
-    right: 15px;
+    right: 12px;
 }
 
 .tof {
@@ -559,7 +559,8 @@ body {
 }
 
 .bracket i {
-    color: rgb(22, 22, 123);
+    color: rgb(13, 13, 14);
+    font-size: 14px;
 }
 
 .bienvenue {
