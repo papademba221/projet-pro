@@ -123,7 +123,7 @@ border-radius: 20px;
 }
 .notifs {
     display: flex;
-    gap: 6px;
+    gap: 2px;
 }
 
 .cloche span{
@@ -158,7 +158,7 @@ font-weight: bold;
 .menu-toggle {
 display: none;
 font-size: 22px;
-background: none;
+background-color: none;
 border: none;
 cursor: pointer;
 }
@@ -172,11 +172,11 @@ align-items: center;
 }
 
 h2{
-    font-size: 18px;
+    font-size: 15px;
 }
 
 #modal-overlay {
-    display: none;
+display: none;
 position: fixed;
 top: 0; left: 0;
 width: 100%; height: 100%;
@@ -285,8 +285,6 @@ color: white;
 .icon i {
 font-size: 16px;
 }
-
-
 
 
 
@@ -508,19 +506,50 @@ margin: none;
 }
 .menu-toggle{
 margin: none;
-font-size: 15px;
+font-size: 20px;
+margin-right: 70px;
 color:  rgb(22, 22, 123);;
 background-color: none;
 }
 
 .header h1{
-    font-size: 15px;
-    margin-left: -15px;
+    font-size: 12px;
+    margin-left: -90px;
     margin-top: 8px;
 }
 
+.recherche{
+    margin-right: 35px;
+}
+
+.notifs.cloche{
+    gap: 2px;
+}
+
+
+.cloche i {
+    margin-right: 5px;
+}
+.badge{
+    position: absolute;
+    right: 15px;
+}
+
+.tof{
+    margin-right: 25px;
+}
+.sp1{
+    
+    right: 28px;
+}
 .bracket i{
     color: rgb(22, 22, 123);
+    
+    
+}
+.mobile-create-btn{
+    font-size: 10px;
+    
 }
 .card{
     width: 190px;
@@ -533,5 +562,10 @@ background-color: none;
 
 button {
 width: auto;
+
+}
+
+.form-grid{
+    grid-template-columns: 1fr;
 }
 }
