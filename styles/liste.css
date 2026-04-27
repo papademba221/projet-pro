@@ -7,6 +7,8 @@ font-family: Arial, sans-serif;
 
 body {
 background: #f5f6fa;
+overflow: hidden;
+max-width: 100vw;
 }
 
 /* LAYOUT */
@@ -485,7 +487,7 @@ justify-content: space-between;
 gap: 5px;
 
 }
-.card{
+.cards{
     width: auto; 
     
 }
@@ -496,76 +498,125 @@ gap: 5px;
 }
 }
 
-@media (max-width: 600px) {
-.cards {
-grid-template-columns: repeat(2, 1fr);
-align-items: center;
-justify-content: space-between;
-gap: 10px;
-margin: none;
-}
-.menu-toggle{
-margin: none;
-font-size: 20px;
-margin-right: 70px;
-color:  rgb(22, 22, 123);;
-background-color: none;
+@media (max-width: 560px) {
+body {
+    overflow-x: hidden;
 }
 
-.header h1{
+.main {
+    padding: 10px;
+    margin: 0;
+}
+
+.header {
+    padding: 0;
+    margin: 0;
+    gap: 5px;
+}
+
+.menu-toggle {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    color: rgb(22, 22, 123);
+    background: none;
+    border: none;
+}
+
+.header h1 {
     font-size: 12px;
-    margin-left: -90px;
-    margin-top: 8px;
+    margin: 0;
+    padding: 0;
+    flex: 1;
 }
 
-.recherche{
-    margin-right: 35px;
+.recherche {
+    margin: 0;
+    padding: 0;
 }
 
-.notifs.cloche{
+.notifs {
     gap: 2px;
+    margin: 0;
+    padding: 0;
 }
-
 
 .cloche i {
-    margin-right: 5px;
+    margin: 0;
 }
-.badge{
+
+.badge {
     position: absolute;
     right: 15px;
 }
 
-.tof{
-    margin-right: 25px;
+.tof {
+    margin: 0;
 }
-.sp1{
-    
+
+.sp1 {
     right: 28px;
 }
-.bracket i{
+
+.bracket i {
     color: rgb(22, 22, 123);
-    
-    
 }
-.mobile-create-btn{
+
+.bienvenue {
+    margin: 10px 0;
+    padding: 0;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.card {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.card h3 {
+    font-size: 12px;
+    margin: 5px;
+    padding: 0;
+}
+
+.card p {
     font-size: 10px;
-    
-}
-.card{
-    width: 190px;
+    margin: 5px;
+    padding: 0;
 }
 
-.card img{
-    width: 170px;
+.card h5 {
+    font-size: 11px;
+    margin: 5px;
+    padding: 0;
 }
-
 
 button {
-width: auto;
-
+    font-size: 12px;
+    width: auto;
+    padding: 8px 12px;
 }
 
-.form-grid{
+.form-grid {
     grid-template-columns: 1fr;
 }
 }
