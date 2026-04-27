@@ -500,7 +500,7 @@ gap: 5px;
 
 @media (max-width: 560px) {
 body {
-    overflow-x: hidden;
+    overflow: auto;
 }
 
 .main {
