@@ -78,7 +78,7 @@ function afficherHotels() {
       </div>
     `;
 
-    //card.onclick = () => goToDetail(hotel.id);
+    card.onclick = () => goTodetail(hotel.id);
 
     cards.appendChild(card);
   });

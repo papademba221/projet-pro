@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Détail Hôtel</title>
+  <link rel="stylesheet" href="details.css">
+</head>
+<body>
+
+<div class="detail">
+  <div>
+    <img id="image" src="" alt="">
+  </div>
+
+  <div class="texte">
+    <h1 id="name"></h1>
+    <p><strong>Localisation :</strong> <span id="location"></span></p>
+    <p><strong>Étoiles :</strong> <span id="stars"></span></p>
+    <p><strong>Chambres :</strong> <span id="rooms"></span></p>
+    <p><strong>Restauration :</strong> <span id="restaurant"></span></p>
+    <p><strong>Services :</strong> <span id="services"></span></p>
+    <p><strong>Prix :</strong> <span id="price"></span></p>
+  </div>
+
+  <div class="btn">
+    <button onclick="goBack()">⬅ Retour</button>
+  </div>
+</div>
+
+<script>
+function goBack(){
+  window.location.href = "pages/liste.html";
+}
+</script>
+
+<script src="details.js" type="module"></script>
+
+</body>
+</html>

@@ -65,12 +65,6 @@
         </main>
     </div>
 
-
-
-
-
-
-
     
     <div id="modal-card">
 <h2> CRÉER UN NOUVEAU HÔTEL</h2>
@@ -143,7 +137,12 @@ function togglePopup() {
                 popup.classList.toggle("open");
             }
         }
-           
+
+function goTodetail(id) {
+            window.location.href = `/details.html?id=${id}`;
+            }
+           window.togglePopup= togglePopup;
+           window.goTodetail= goTodetail;
                     
     </script>
 
