@@ -19,31 +19,35 @@
         <div class="login-box">
             <p class="title">Inscrivez-vous en tant que Admin</p>
 
-            <form method="post">
-                <label for="nom">Nom</label>
-                <input type="text" id="nom" name="nom" required>
-                
+            <form class="formulaire_inscription">
+
+                <label for="username">Username</label>
+                <input type="text" id="username" required>
+
                 <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" required>
 
                 <label for="password">Mot de passe</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" required>
+
+                <div class="remember">
+                    <input type="checkbox" id="remember-me" required>
+
+                    <label for="remember-me">
+                        Accepter les termes et la politique
+                    </label>
+                </div>
+
+                <button type="submit" id="btn_inscription">S'inscrire</button>
+
             </form>
-
-            <div class="remember">
-                <input type="checkbox" id="remember-me">
-                <label for="remember-me">Accepter les termes et la politique</label>
-            </div>
-
-<button type="button" onclick="window.location.href='/index.html'">S'inscrire</button>
-            
-            <div class="links">
-                <p>Vous avez déjà un compte? <a href="/index.html">Se connecter</a></p>
-            </div>
         </div>
 
         
 
     </div>
+
+
+    <script src="/js/register.js"></script>
 </body>
 </html>

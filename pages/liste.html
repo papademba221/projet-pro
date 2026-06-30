@@ -23,10 +23,9 @@
             <div class="user">
                 <img src="../img/PHOTO FOR FLYER.jpg" alt="">
                 <div>
-                    <p>Mouhamet Badiane</p>
+                    <p>P. Demba Bassoume</p>
                     <p><span class="sp">●</span>  en ligne</p>
                 </div>
-            </div>
         </aside>
         <!-- MAIN -->
         <main class="main">
@@ -50,14 +49,11 @@
                 </div>
             </header> 
             
-            
             <section class="bienvenue">
                 <h2>Hôtels  8</h2>
                 <button class="mobile-create-btn" onclick="togglePopup()">+ Créer un nouveau hôtel</button>
-
-
-                
             </section>
+
             <!-- CARDS -->
             <div class="cards">
                 
@@ -65,65 +61,62 @@
         </main>
     </div>
 
-    
     <div id="modal-card">
-<h2> CRÉER UN NOUVEAU HÔTEL</h2>
-            <button class="close-btn" onclick="togglePopup()">×</button>
+        <h2> CRÉER UN NOUVEAU HÔTEL</h2>
+        <button class="close-btn" onclick="togglePopup()">×</button>
 
-            <form>
-                <div class="form-grid">
+        <form id="hotelForm" enctype="multipart/form-data">
+            <div class="form-grid">
 
-                    <div class="form-group">
-                        <label>Nom de l'hôtel</label>
-                        <input type="text" placeholder="CAP Marniane">
-                    </div>
+                <div class="form-group">
+                    <label>Nom de l'hôtel</label>
+                    <input type="text" id="nom" name="nom" placeholder="CAP Marniane" required>
+                </div>
 
-                    <div class="form-group">
-                        <label>Adresse</label>
-                        <input type="text" placeholder="Les îles du saloum, Mar Lodj">
-                    </div>
+                <div class="form-group">
+                    <label>Adresse</label>
+                    <input type="text" id="adresse" name="adresse" placeholder="Les îles du saloum, Mar Lodj" required>
+                </div>
 
-                    <div class="form-group">
-                        <label>E-mail</label>
-                        <input type="email" placeholder="information@gmail.com">
-                    </div>
+                <div class="form-group">
+                    <label>E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="information@gmail.com" required>
+                </div>
 
-                    <div class="form-group">
-                        <label>Numéro de téléphone</label>
-                        <input type="text" placeholder="+221 77 777 77 77">
-                    </div>
+                <div class="form-group">
+                    <label>Numéro de téléphone</label>
+                    <input type="text" id="telephone" name="telephone" placeholder="+221 77 777 77 77" required>
+                </div>
 
-                    <div class="form-group">
-                        <label>Prix par nuit</label>
-                        <input type="text" placeholder="25.000 XOF">
-                    </div>
+                <div class="form-group">
+                    <label>Prix par nuit</label>
+                    <input type="number" id="prix" name="prix" placeholder="25.000 XOF">
+                </div>
 
-                    <div class="form-group">
-                        <label for="devise">Devise</label>
-                        <select name="devise" id="devise">
-                            <option>F XOF</option>
-                            <option>EUR</option>
-                            <option>USD</option>
-                        </select>
-                    </div>
-
+                <div class="form-group">
+                    <label for="devise">Devise</label>
+                    <select name="devise" id="devise">
+                        <option>F XOF</option>
+                        <option>EUR</option>
+                        <option>USD</option>
+                    </select>
                 </div>
 
                 <div class="telecharger">
                     <p>Ajouter une photo</p>
-                    <div class="telecharger-box">
+                    <div class="telecharger-box" id="telecharger-box">
                         <span>📷</span>
                         <p>Ajouter une photo</p>
-                        <input type="file" id="photo" hidden>
                     </div>
+                    <input type="file" id="photo" name="photo" accept="image/*" hidden>
                 </div>
+            </div>
 
-                <button type="submit">Enregistrer</button>
+            <button type="submit">Enregistrer</button>
 
-            </form>
+        </form>
     </div>
 
-    
     <script>
         const toggle = document.querySelector('.menu-toggle');
         const sidebar = document.querySelector('.sidebar');
@@ -131,21 +124,21 @@
             sidebar.classList.toggle('active');
         });
 
-function togglePopup() {
+        function togglePopup() {
             const popup = document.getElementById("modal-card");
             if (popup) {
                 popup.classList.toggle("open");
             }
         }
 
-function goTodetail(id) {
-            window.location.href = `/details.html?id=${id}`;
-            }
-           window.togglePopup= togglePopup;
-           window.goTodetail= goTodetail;
-                    
+        function goTodetail(id) {
+            window.location.href = `./details.html?id=${id}`;
+        }
+
+        window.togglePopup = togglePopup;
+        window.goTodetail = goTodetail;
     </script>
 
-    <script src="/liste.js" type="module"></script>
+    <script src="../js/liste.js"></script>
 </body>
 </html>

@@ -1,0 +1,225 @@
+:root {
+  --ink: #0E1A1A;
+  --sand: #F5EFE3;
+  --sand-deep: #EAE0CC;
+  --copper: #C8862E;
+  --sage: #7A9A8E;
+  --paper: #FBF8F2;
+  --line: rgba(14, 26, 26, 0.12);
+
+  --display: 'Fraunces', serif;
+  --body: 'Manrope', sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--sand);
+  font-family: var(--body);
+  color: var(--ink);
+}
+
+.page {
+  min-height: 100vh;
+  padding: 32px clamp(20px, 5vw, 64px);
+}
+
+/* Retour */
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 28px;
+  opacity: 0.75;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.back:hover { opacity: 1; transform: translateX(-2px); }
+.back-arrow { font-size: 1.05rem; }
+
+/* Layout principal */
+.detail {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(24px, 4vw, 56px);
+  max-width: 1180px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* Visuel */
+.visual {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background: var(--sand-deep);
+  box-shadow: 0 30px 60px -25px rgba(14, 26, 26, 0.35);
+}
+.visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.visual-veil {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(14,26,26,0) 55%, rgba(14,26,26,0.55) 100%);
+  pointer-events: none;
+}
+.eyebrow {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: rgba(251, 248, 242, 0.92);
+  color: var(--ink);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Texte */
+.texte {
+  padding-top: 4px;
+}
+
+.eyebrow-label {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--copper);
+  margin: 0 0 10px;
+}
+
+h1#name {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(2.1rem, 4vw, 3rem);
+  line-height: 1.05;
+  margin: 0 0 14px;
+  color: var(--ink);
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 32px;
+  color: var(--ink);
+  opacity: 0.7;
+  font-size: 0.98rem;
+}
+.location .pin { color: var(--sage); flex-shrink: 0; }
+
+/* Fiche faits */
+.facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 18px;
+  margin: 0 0 32px;
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.fact { display: flex; flex-direction: column; gap: 4px; }
+.fact dt {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.55;
+  font-weight: 700;
+}
+.fact dd {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* Ticket prix */
+.ticket {
+  display: flex;
+  align-items: stretch;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+}
+.ticket-left, .ticket-right {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+}
+.ticket-left { flex: 1; }
+.ticket-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.65;
+  font-weight: 700;
+}
+.ticket-price {
+  font-family: var(--display);
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--copper);
+}
+.ticket-id {
+  font-family: monospace;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+.ticket-perf {
+  width: 0;
+  border-left: 2px dashed rgba(251, 248, 242, 0.3);
+  position: relative;
+}
+.ticket-perf::before, .ticket-perf::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: var(--sand);
+  border-radius: 50%;
+  left: -9px;
+}
+.ticket-perf::before { top: -9px; }
+.ticket-perf::after { bottom: -9px; }
+
+/* Responsive */
+@media (max-width: 820px) {
+  .detail {
+    grid-template-columns: 1fr;
+  }
+  .visual { aspect-ratio: 16 / 10; }
+  .facts { grid-template-columns: 1fr 1fr; }
+  .ticket { flex-direction: column; }
+  .ticket-perf {
+    width: auto;
+    height: 0;
+    border-left: none;
+    border-top: 2px dashed rgba(251, 248, 242, 0.3);
+  }
+  .ticket-perf::before, .ticket-perf::after { top: -9px; left: auto; }
+  .ticket-perf::before { left: -9px; }
+  .ticket-perf::after { right: -9px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .back { transition: none; }
+}

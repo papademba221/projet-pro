@@ -20,16 +20,17 @@
     <div class="login-box">
         <p class="title">Connectez-vous en tant que Admin</p>
 
-        <form>
-            <input type="email" placeholder="E-mail" required>
-            <input type="password" placeholder="Mot de passe" required>
+        <form class="formulaire_connexion">
+            <input type="email" id="email" placeholder="E-mail" required>
+            <input type="password" id="password" placeholder="Mot de passe" required>
 
         <div class="remember">
+
             <input type="checkbox" id="remember">
             <label for="remember">Gardez-moi connecté</label>
         </div>
 
-        <button type="button" onclick="window.location.href='/pages/board.html'">Se connecter</button>
+        <button type="submit" id="btn_connexion">Se connecter</button>
         </form>
     </div>
 
@@ -40,5 +41,9 @@
 
 </div>
 
+
+
+
+<script src="/js/script.js"></script>
 </body>
 </html>
